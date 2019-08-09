@@ -32,9 +32,9 @@ function gameRefresh() {
 function dice(option: number) {
     gameStatus.classList.remove('active');
     let random = Math.floor((Math.random() * 100) + 1);
-    let coins = parseInt(storage.getItem('coins'));
-    let winGame = parseInt(storage.getItem('roll_win'));
-    let loseGame = parseInt(storage.getItem('roll_lose'));
+    let coins = Number(storage.getItem('coins'));
+    let winGame = Number(storage.getItem('roll_win'));
+    let loseGame = Number(storage.getItem('roll_lose'));
     let text = ``;
     if (coins !== 0) {
         if (option === 47) {
@@ -70,7 +70,7 @@ function dice(option: number) {
 
 let rollBtn = document.querySelectorAll('.js-roll');
 
-for (let i = 0; i < rollBtn.length; i = i + 1) {
+for (let i = 0; i < rollBtn.length; i++) {
     rollBtn[i].addEventListener('click', () => {
         let option = Number(rollBtn[i].getAttribute('data-roll'));
         dice(option);

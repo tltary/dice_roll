@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="dist/dice.css">
+
+    <title>dice roll game | TypeScript</title>
+  </head>
+  <body>
+
+    <section class="game">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="game__title">
+              DiceRoll
+              <a class="game__link" target="_blank" href="https://tltary.github.io/dice_roll/index.html">Github</a>
+              <span class="btn btn-danger game__title__restart js-game-restart">Restart game</span>
+            </h1>
+            <div class="game__desk">
+              <h3 class="game__annotation">
+                Coins: <span class="js-game-coins"></span>
+              </h3>
+              <h3 class="game__annotation game__annotation--win">
+                Win games: <span class="js-game-win"></span>
+              </h3>
+              <h3 class="game__annotation game__annotation--lose">
+                Lose games: <span class="js-game-lose"></span>
+              </h3>
+              <span class="js-game-status game__status"></span>
+              <p class="game__annotation">
+                Choose one of the options!
+              </p>
+              <p class="game__annotation game__annotation--rules">
+                Rules: when you select one of the options (less than 47 or greater than 53), a random number from 1 to 100 will be generated. If your option is correct, you will get 2 coins, if not, 1 coin will be removed for participation (initially you have 10 coins). When the coins run out, you will not be able to continue the game. At any time you can start the game again! Enjoy the game and remember that this is all random;)
+              </p>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="row">
+              <div class="col-6">
+                <button class="game__choice js-roll" data-roll="47">
+                  < 47
+                </button>
+              </div>
+              <div class="col-6">
+                <button class="game__choice js-roll" data-roll="53">
+                  > 53
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <script src="dist/main.bundle.js"></script>
+  </body>
+</html>

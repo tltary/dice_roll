@@ -1,0 +1,47 @@
+.game {
+	padding: 25px 0px;
+}
+.game .game__desk {
+    border: 3px #3e3e3e solid;
+    background: #e3e3e3;
+    padding: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+.game .game__title {
+
+}
+.game .game__link {
+	font-size: 18px;
+}
+.game .game__title .game__title__restart {
+	float: right;
+	cursor: pointer;
+}
+.game .game__annotation {
+
+}
+.game .game__annotation.game__annotation--win {
+	color: green;
+}
+.game .game__annotation.game__annotation--lose {
+	color: red;
+}
+.game .game__annotation.game__annotation--rules {
+	font-size: 14px;
+}
+.game .game__status {
+	display: none;
+    padding: 10px;
+    border: 3px #3e3e3e solid;
+    font-size: 25px;
+    padding: 5px 15px;
+}
+.game .game__status.active {
+	display: inline-block;
+}
+.game .game__choice {
+	width: 100%;
+    padding: 40px 0px;
+    font-size: 38px;
+}

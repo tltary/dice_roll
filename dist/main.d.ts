@@ -1,0 +1,10 @@
+declare const storage: Storage;
+declare const gameRestart: Element;
+declare const gameCoins: Element;
+declare const gameWin: Element;
+declare const gameLose: Element;
+declare const gameStatus: Element;
+declare function init(): void;
+declare function gameRefresh(): void;
+declare function dice(option: number): void;
+declare let rollBtn: NodeListOf<Element>;

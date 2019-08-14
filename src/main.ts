@@ -5,31 +5,32 @@ const gameWin     = document.querySelector('.js-game-win');
 const gameLose    = document.querySelector('.js-game-lose');
 const gameStatus  = document.querySelector('.js-game-status');
 
-document.addEventListener('DOMContentLoaded', init);
-
-function init() {
+let init = () => {
     if (!storage.getItem('coins')) {
         storage.setItem('coins', '10');
         storage.setItem('roll_win', '0');
         storage.setItem('roll_lose', '0');
     }
     gameRefresh();
-}
+};
+
+document.addEventListener('DOMContentLoaded', init);
 
 gameRestart.addEventListener('click', () => {
     storage.setItem('coins', '10');
     storage.setItem('roll_win', '0');
     storage.setItem('roll_lose', '0');
+    gameStatus.classList.remove('active');
     gameRefresh();
 });
 
-function gameRefresh() {
+let gameRefresh = () => {
     gameCoins.textContent = String(storage.getItem('coins'));
     gameWin.textContent   = String(storage.getItem('roll_win'));
     gameLose.textContent  = String(storage.getItem('roll_lose'));
-}
+};
 
-function dice(option: number) {
+let dice = (option: number) => {
     gameStatus.classList.remove('active');
     let random = Math.floor((Math.random() * 100) + 1);
     let coins = Number(storage.getItem('coins'));
@@ -66,7 +67,7 @@ function dice(option: number) {
     storage.setItem('coins', String(coins));
     storage.setItem('roll_win', String(winGame));
     storage.setItem('roll_lose', String(loseGame));
-}
+};
 
 let rollBtn = document.querySelectorAll('.js-roll');
 
